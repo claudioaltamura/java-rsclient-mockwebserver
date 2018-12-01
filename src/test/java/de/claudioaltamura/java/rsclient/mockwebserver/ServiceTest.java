@@ -1,6 +1,8 @@
 package de.claudioaltamura.java.rsclient.mockwebserver;
+import static org.hamcrest.CoreMatchers.startsWith;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.junit.Rule;
@@ -37,10 +39,9 @@ class ServiceTest {
     //then
     final RecordedRequest request = mockWebServer.takeRequest(10, TimeUnit.SECONDS);
 
-    String body = request.getBody().toString();
     assertNotNull(request);
     assertEquals(200, result);
-    assertEquals(request.getRequestLine(), "GET /1.1");
+    assertThat(request.getRequestLine(),startsWith("GET"));
   }
 
 }
