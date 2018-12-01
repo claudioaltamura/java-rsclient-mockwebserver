@@ -2,3 +2,13 @@
 
 # java-rsclient-mockwebserver
 jax-rs client with mocked webserver example
+
+## Running the example
+
+Run
+
+	Application.java
+
+Test
+
+	ServiceTest.java
