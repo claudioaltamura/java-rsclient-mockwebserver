@@ -1,4 +1,5 @@
 package de.claudioaltamura.java.rsclient.mockwebserver;
+
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
@@ -10,7 +11,7 @@ public class Service {
 
   private Logger logger = LoggerFactory.getLogger(Service.class);
 
-  private String host = "example";
+  private String host = "example.com";
   
   private int port = 80;
  
